@@ -1,0 +1,23 @@
+{
+    "1": {
+        "id": 1,
+        "title": "ghamar dar aghrab",
+        "desc": "in soali dar shomal ghamar dar aghrab ast.",
+        "total_solved": 100,
+        "success_solved": 11
+    },
+    "2" : {
+        "id": 2,
+        "title": "khar savari",
+        "desc": "khar savarani dar kharestan kharsavari mikardand.",
+        "total_solved": 200,
+        "success_solved": 22
+    },
+    "3": {
+        "id": 3,
+        "title": "football bazi kon",
+        "desc": "dar in football ghanooni nadarim.",
+        "total_solved": 200,
+        "success_solved": 22
+    }
+}
