@@ -16,8 +16,8 @@ class Table extends Component {
     render() { 
         return (
             <table class="table" style={{background: "#fff", margin: "12px 0", borderRadius: "10px", padding: "12px"}}>
-                <TableHeader headers={this.state.headers}/>
-                <TableBody questions={this.state.questions}/>
+                <TableHeader columns={this.props.columns}/>
+                <TableBody data={this.props.data}/>
             </table>
         );
     }

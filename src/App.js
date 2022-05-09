@@ -29,9 +29,9 @@ function App() {
       </div>
       <div className='row'>
         <div className='col-3'>
-          <Accordion filter={"category"}/>
-          <Accordion filter={"soi"}/>
-          <Accordion/>
+          {/* <Accordion filter={"category"}/>
+          <Accordion filter={"solution-status"}/>
+          <Accordion filter={"tags"}/> */}
         </div>
         <div className='col-9'>
           <Table/>

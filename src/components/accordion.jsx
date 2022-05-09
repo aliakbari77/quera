@@ -5,32 +5,32 @@ class Accordion extends Component {
         
      } 
     render() { 
+        const {filter} = this.props
         return (
         <div className="filter-box mt-4">
             <div>
-                <h5 className="card-title">Filter Box</h5>
-                <div className="accordion" id="accordionExample">
+                <div className="accordion" id={filter}>
                     <div className="card">
-                        <div className="card-header" id="headingOne">
+                        <div className="card-header" id={filter}>
                             <h2 className="mb-0">
                             <button
-                            id="btn-FILTER_NAME-collapse"
+                            id={filter}
                             className="btn"
                             type="button"
                             data-toggle="collapse"
-                            data-target="#collapseOne"
+                            data-target={filter}
                             aria-expanded="true"
-                            aria-controls="collapseOne"
+                            aria-controls={filter}
                             >
-                            filter
+                            {filter}
                             </button>
                             </h2>
                         </div>
                         <div
-                        id="collapseOne"
+                        id={filter}
                         className="collapse show"
                         aria-labelledby="headingOne"
-                        data-parent="#accordionExample"
+                        data-parent={filter}
                         >
                             <div className="card-body">
                                 <div >
