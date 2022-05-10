@@ -9,15 +9,11 @@ class Table extends Component {
         questions: []
      } 
 
-    async componentDidMount(){
-        const {data: questions} = await axios.get("http://127.0.0.1:9000/questions/")
-        this.setState({questions})
-    }
     render() { 
         return (
             <table class="table" style={{background: "#fff", margin: "12px 0", borderRadius: "10px", padding: "12px"}}>
                 <TableHeader columns={this.props.columns}/>
-                <TableBody data={this.props.data}/>
+                <TableBody data={this.props.data} columns={this.props.columns}/>
             </table>
         );
     }
