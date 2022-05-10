@@ -13,7 +13,8 @@ class QuestionsTable extends Component {
         ),},
         { path: "source", label: "Event/Uni" },
         { path: "tags", label: "Number of Solved" },
-        { key: "bookmark", content: () => <i class="fa fa-bookmark-o" aria-hidden="true" style={{fontSize: "20px"}}></i>}
+        { path: "success_solved", label: "Number of Solved"},
+        { key: "bookmark", content: () => <i className="fa fa-bookmark-o" aria-hidden="true" style={{fontSize: "20px"}}></i>}
       ];
 
     render() { 

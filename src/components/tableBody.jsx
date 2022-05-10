@@ -13,6 +13,9 @@ class TableBody extends Component {
         if (column.path == "source")
             return <span style={{background: "#0099cc", padding: "2px", borderRadius: "5px", margin: "1.5px", color: "#fff"}}>{_.get(item, column.path)}</span>
         
+        if (column.path == "success_solved")
+            return <span><b>{_.get(item, column.path)}</b> of {_.get(item, "total_solved")}</span>
+
         return _.get(item, column.path);
       };
       
@@ -22,8 +25,8 @@ class TableBody extends Component {
             <tbody>
         {data.map((item) => (
           <tr key={item.id}>
-            {columns.map((column) => (
-              <td >
+            {columns.map((column, index) => (
+              <td key={item.index}>
                 {this.renderCell(item, column)}
               </td>
             ))}
