@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import {Link} from 'react-router-dom';
+import Table from './table';
 
 class QuestionsTable extends Component {
     state = {  }
