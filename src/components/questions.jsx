@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { Component } from 'react';
+import QuestionsTable from './questionsTable'
 
 class Questions extends Component {
     state = { 
@@ -14,10 +15,9 @@ class Questions extends Component {
 
     render() { 
         return (
-            <h1>Questions</h1>
+            <QuestionsTable questions={this.state.questions}/>
         );
     }
 }
  
-export default Questions
-;
+export default Questions;

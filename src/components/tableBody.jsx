@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class TableBody extends Component {
     state = {  } 
     render() {
-        const {questions} = this.props
+        const {data: questions} = this.props
         return (
             <tbody>
                 {questions.map((question, index) => 
