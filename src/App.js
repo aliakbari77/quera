@@ -13,6 +13,11 @@ import Questions from './components/questions';
 import {Switch} from 'react-router-dom';
 import Question from './components/question';
 import { Route } from 'react-router-dom';
+import EduSystem from './components/eduSystem';
+import College from './components/college';
+import Exercises from './components/exercises';
+import Events from './components/events';
+import Dashboard from './components/dashboard';
 
 class App extends Component {
   state = {  } 
@@ -23,28 +28,11 @@ class App extends Component {
           <Navbar/>
           <div className='container' >
               <Route path="/questions/:id/" component={Question}/>
-          <Header/>
-          <div className='row' style={{marginTop: "36px"}}>
-            <div className='col-3'>
-              <SwitchButton/>
-            </div>
-            <div className='col-7'>
-              <FormInput/>
-            </div>
-            <div className='col-2'>
-              <FormSelect/>
-            </div>
-          </div>
-          <div className='row'>
-            <div className='col-3'>
-              {/* <Accordion filter={"category"}/>
-              <Accordion filter={"solution-status"}/>
-            <Accordion filter={"tags"}/> */}
-            </div>
-            <div className='col-9'>
-              <Questions/>
-            </div>
-          </div>
+              <Route path="/edusys" component={EduSystem}/>
+              <Route path="/college" component={College}/>
+              <Route path="/exercises" component={Exercises}/>
+              <Route path="/events" component={Events}/>
+              <Route path="/" exact component={Dashboard}/>
           </div>
         </div>
 
