@@ -9,6 +9,8 @@ import FormInput from './components/form';
 import FormSelect from './components/formSelect';
 import Table from './components/table';
 import "font-awesome/css/font-awesome.css";
+import QuestionsTable from './components/questionsTable';
+import Questions from './components/questions';
 
 function App() {
   return (
@@ -34,7 +36,7 @@ function App() {
           <Accordion filter={"tags"}/> */}
         </div>
         <div className='col-9'>
-          <Table/>
+          <Questions/>
         </div>
       </div>
         {/* navbar
