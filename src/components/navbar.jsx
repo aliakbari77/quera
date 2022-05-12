@@ -9,22 +9,22 @@ class Navbar extends Component {
             <nav className="navbar navbar-expand-lg navbar-light " style={{background: "#fff"}} >
                 <div className="container" >
 
-                <NavLink className="navbar-brand" to="#">
+                <NavLink className="navbar-brand" to="/">
                     <h3 style={{color: "#0099cc"}}>Quera</h3>
                 </NavLink>
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav justify-content-center">
                     <li className="nav-item ">
-                        <NavLink className="nav-link" to="#">Educational system</NavLink>
+                        <NavLink className="nav-link" to="/edusys">Educational system</NavLink>
                     </li>
                     <li className="nav-item">
-                        <NavLink className="nav-link" to="#">College</NavLink>
+                        <NavLink className="nav-link" to="/college">College</NavLink>
                     </li>
                     <li className="nav-item">
-                        <NavLink className="nav-link" to="#">Exercises</NavLink>
+                        <NavLink className="nav-link" to="/exercises">Exercises</NavLink>
                     </li>
                     <li className="nav-item">
-                        <NavLink className="nav-link" to="#">Events</NavLink>
+                        <NavLink className="nav-link" to="/events">Events</NavLink>
                     </li>
                     </ul>
                 </div>
