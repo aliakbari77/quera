@@ -1,6 +1,7 @@
 import  Joi  from 'joi-browser';
 import React, { Component } from 'react';
 import Form from "./form"
+import axios from 'axios'
 
 class Login extends Form {
     state = { 
@@ -16,8 +17,12 @@ class Login extends Form {
         password: Joi.string().required().label("Password")
     }
 
-    doSubmit () {
-        console.log(this.state.data);
+    async doSubmit () {
+        const {data} = await axios.post("http://localhost:3900/auth", {
+            email: this.state.data.username,
+            password: this.state.data.password
+        })
+        console.log(data);
     }
     render() { 
         return (
