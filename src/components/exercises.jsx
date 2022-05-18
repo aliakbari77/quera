@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Header from './header';
 import SwitchButton from './switch';
-import FormInput from './form';
+import FormInput from './formInput';
 import FormSelect from './formSelect';
 import Questions from './questions';
 
