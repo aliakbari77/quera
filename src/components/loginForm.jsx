@@ -17,18 +17,14 @@ class Login extends Form {
         password: Joi.string().required().label("Password")
     }
 
-    async doSubmit () {
-        const {data} = await axios.post("http://localhost:3900/auth", {
-            email: this.state.data.username,
-            password: this.state.data.password
-        })
-        console.log(data);
+    doSubmit () {
+        console.log(this.state.data)
     }
     render() { 
         return (
             <form onSubmit={this.handleSubmit}>
-                {this.renderInput({name: "username", id: "username", label: "Username"})}
-                {this.renderInput({name: "password", id: "password", label: "Password"})}
+                {this.renderInput("username", "username", "Username")}
+                {this.renderInput("password", "password", "Password")}
                 {this.renderButton({label: "Login"})}
             </form>
         );

@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
-const FormButton = ({label, type}) => {
+const FormButton = ({label, }) => {
     return ( 
-        <button type={type} className="btn btn-primary m-2">{label}</button>
+        <button type={'submit'} className="btn btn-primary m-2">{label}</button>
 
      );
 }
