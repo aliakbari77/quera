@@ -2,7 +2,7 @@
     {
         "id": 1,
         "title": "ghamar dar aghrab",
-        "source": "University",
+        "source": ["University"],
         "total_solved": 100,
         "success_solved": 11,
         "tags": ["strings"]
@@ -10,7 +10,7 @@
     {
         "id": 2,
         "title": "khar savari",
-        "source": "Event",
+        "source": ["Event"],
         "tags": ["math"],
         "total_solved": 200,
         "success_solved": 22
@@ -18,7 +18,7 @@
     {
         "id": 3,
         "title": "football bazi kon",
-        "source": "Event",
+        "source": ["Event"],
         "tags": ["math", "string"],
         "total_solved": 300,
         "success_solved": 33
