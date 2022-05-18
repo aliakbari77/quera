@@ -45,7 +45,7 @@ class Form extends Component {
         return error ? error.details[0].message : null
     }
 
-    renderInput = ({name, id, type= "text", label}) => {
+    renderInput = ({name, id, label, type= "text"}) => {
         return (
             <FormInput  
                 name={name}
