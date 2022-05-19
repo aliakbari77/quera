@@ -33,9 +33,9 @@ class RegisterForm extends Form {
     render() { 
         return (
             <form onSubmit={this.handleSubmit}>
-                {this.renderInput({name: "email", id: "email", label: "Email"})}
-                {this.renderInput({name: "password", id: "password", label: "Password"})}
-                {this.renderInput({name: "username", id: "username", label: "Username"})}
+                {this.renderInput("email", "email", "Email")}
+                {this.renderInput("password", "password", "Password")}
+                {this.renderInput("username",  "username", "Username")}
                 {this.renderButton({label: "Submit"})}
             </form>
         );
