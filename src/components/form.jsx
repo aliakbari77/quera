@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import FormButton from './formButton';
 import FormInput from './formInput';
-import Joi, { errors } from 'joi-browser'
+import Joi from 'joi-browser'
 
 class Form extends Component {
     state = { 
@@ -45,15 +45,17 @@ class Form extends Component {
         return error ? error.details[0].message : null
     }
 
-    renderInput = ({name, id, label, type= "text"}) => {
+    renderInput = (name, id, label, type="text") => {
+        const {errors, data} = this.state
         return (
             <FormInput  
                 name={name}
                 id={id}
                 type={type}
+                value={data[name]}
                 label={label}
                 onChange={this.handleChange}
-                error={this.state.errors[name]}
+                error={errors[name]}
             />
         )
     }
