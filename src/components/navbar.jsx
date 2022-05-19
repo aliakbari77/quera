@@ -14,18 +14,24 @@ class Navbar extends Component {
                 </NavLink>
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav justify-content-center">
-                    <li className="nav-item ">
-                        <NavLink className="nav-link" to="/edusys">Educational system</NavLink>
-                    </li>
-                    <li className="nav-item">
-                        <NavLink className="nav-link" to="/college">College</NavLink>
-                    </li>
-                    <li className="nav-item">
-                        <NavLink className="nav-link" to="/exercises">Exercises</NavLink>
-                    </li>
-                    <li className="nav-item">
-                        <NavLink className="nav-link" to="/events">Events</NavLink>
-                    </li>
+                        <li className="nav-item ">
+                            <NavLink className="nav-link" to="/edusys">Educational system</NavLink>
+                        </li>
+                        <li className="nav-item">
+                            <NavLink className="nav-link" to="/college">College</NavLink>
+                        </li>
+                        <li className="nav-item">
+                            <NavLink className="nav-link" to="/exercises">Exercises</NavLink>
+                        </li>
+                        <li className="nav-item">
+                            <NavLink className="nav-link" to="/events">Events</NavLink>
+                        </li>
+                        <li className="nav-item">
+                            <NavLink className="nav-link" to="/login">Login</NavLink>
+                        </li>
+                        <li className="nav-item">
+                            <NavLink className="nav-link" to="/register">Register</NavLink>
+                        </li>
                     </ul>
                 </div>
                 </div>

@@ -18,6 +18,8 @@ import College from './components/college';
 import Exercises from './components/exercises';
 import Events from './components/events';
 import Dashboard from './components/dashboard';
+import Login from './components/loginForm';
+import RegisterForm from './components/registerForm';
 
 class App extends Component {
   state = {  } 
@@ -28,6 +30,8 @@ class App extends Component {
           <Navbar/>
           <div className='container' >
               <Route path="/questions/:id/" component={Question}/>
+              <Route path="/login" component={Login}/>
+              <Route path="/register" component={RegisterForm}/>
               <Route path="/edusys" component={EduSystem}/>
               <Route path="/college" component={College}/>
               <Route path="/exercises" component={Exercises}/>
