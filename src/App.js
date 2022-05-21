@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import 'bootstrap/dist/css/bootstrap.css'
 import './App.css';
+import 'react-toastify/dist/ReactToastify.css'
 import Navbar from './components/navbar';
 import Header from './components/header';
 import SwitchButton from './components/switch';
@@ -20,6 +21,7 @@ import Events from './components/events';
 import Dashboard from './components/dashboard';
 import Login from './components/loginForm';
 import RegisterForm from './components/registerForm';
+import Logout from './components/logout';
 
 class App extends Component {
   state = {  } 
@@ -31,6 +33,7 @@ class App extends Component {
           <div className='container' >
               <Route path="/questions/:id/" component={Question}/>
               <Route path="/login" component={Login}/>
+              <Route path="/logout" component={Logout} />
               <Route path="/register" component={RegisterForm}/>
               <Route path="/edusys" component={EduSystem}/>
               <Route path="/college" component={College}/>

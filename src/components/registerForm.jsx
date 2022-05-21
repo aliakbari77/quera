@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import Joi from 'joi-browser';
 import Form from './form'
 import axios from 'axios'
+import config from '../config.json'
+import {ToastContainer} from 'react-toastify'
+import {toast} from 'react-toastify'
 
 class RegisterForm extends Form {
     state = { 
@@ -20,21 +23,32 @@ class RegisterForm extends Form {
     }
 
     async doSubmit () {
-        const data = this.state.data
-        const {email, password, username: name} = data
-        const response = await axios.post("http://localhost:3900/api/users", {
-            email,
-            password,
-            name
-        })
-        console.log(response);
+        try {
+            const data = this.state.data
+            const {email, password, username: name} = data
+            const response = await axios.post(config.apiUrl + "/users", {
+                email,
+                password,
+                name
+            })
+            console.log(response);
+            const jwt = response.headers['x-auth-token']
+            localStorage.setItem("user_key", jwt)
+            console.log(jwt)
+            window.location = "/"
+            
+        } catch (err) {
+            console.log(err)
+            toast.error(err.response.data)
+        }
     }
 
     render() { 
         return (
             <form onSubmit={this.handleSubmit}>
+                <ToastContainer/>
                 {this.renderInput("email", "email", "Email")}
-                {this.renderInput("password", "password", "Password")}
+                {this.renderInput("password", "password", "Password", "password")}
                 {this.renderInput("username",  "username", "Username")}
                 {this.renderButton({label: "Submit"})}
             </form>

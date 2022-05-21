@@ -1,15 +1,26 @@
 import React, { Component } from 'react';
 import  {NavLink}  from 'react-router-dom';
+import jwtDecode from 'jwt-decode'
 
 class Navbar extends Component {
-    state = {  }
+    state = { 
+        user: {}
+     }
     
-    render() { 
+    componentDidMount() {
+        const jwt = localStorage.getItem("user_key") ? localStorage.getItem("user_key") : null
+        if (jwt != null){
+            const user = jwtDecode(jwt)
+            console.log(user);
+            this.setState({user})
+        }
+
+    }
+
+    render() {
+        const {user} = this.state
         return (
             <nav className="navbar navbar-expand-lg navbar-light " style={{background: "#fff"}} >
-                <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
                 <div className="container" >
 
                 <NavLink className="navbar-brand" to="/">
@@ -29,12 +40,26 @@ class Navbar extends Component {
                         <li className="nav-item">
                             <NavLink className="nav-link" to="/events">Events</NavLink>
                         </li>
-                        <li className="nav-item">
-                            <NavLink className="nav-link" to="/login">Login</NavLink>
-                        </li>
-                        <li className="nav-item">
-                            <NavLink className="nav-link" to="/register">Register</NavLink>
-                        </li>
+                        {!user.name &&
+                            <React.Fragment>
+                                <li className="nav-item">
+                                    <NavLink className="nav-link" to="/login">Login</NavLink>
+                                </li>
+                                <li className="nav-item">
+                                    <NavLink className="nav-link" to="/register">Register</NavLink>
+                                </li>
+                            </React.Fragment>
+                        }
+                        {user.name &&
+                            <React.Fragment>
+                            <li className="nav-item">
+                                <NavLink className="nav-link" to="/logout">Logout</NavLink>
+                            </li>
+                            <li className="nav-item">
+                                <NavLink className="nav-link" to="/">{user.name}</NavLink>
+                            </li>
+                        </React.Fragment>
+                        }
                     </ul>
                 </div>
                 </div>
