@@ -12,7 +12,7 @@ class Exercises extends Component {
             <div>
                 <Header/>
           <div className='row' style={{marginTop: "36px"}}>
-            <div className='col-3'>
+            {/* <div className='col-3'>
               <SwitchButton/>
             </div>
             <div className='col-7'>
@@ -20,7 +20,7 @@ class Exercises extends Component {
             </div>
             <div className='col-2'>
               <FormSelect/>
-            </div>
+            </div> */}
           </div>
           <div className='row'>
             <div className='col-3'>
