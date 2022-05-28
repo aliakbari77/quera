@@ -19,7 +19,7 @@ class Dashboard extends Component {
         return (
             <div>
                 {user &&
-                    <div style={{backgroundColor: "#fff", margin: "24px", padding: "24px", borderRadius: "10px", boxShadow: "0px 0px 8px 0px black", width: "25%"}}>
+                    <div style={{backgroundColor: "#fff", margin: "24px", padding: "24px", borderRadius: "10px", boxShadow: "0px 0px 2px 0px black", width: "25%"}}>
                         <h3>{user.name}</h3>
                         <h5>{user.email}</h5>
                     </div>

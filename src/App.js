@@ -15,13 +15,14 @@ import {Switch} from 'react-router-dom';
 import Question from './components/question';
 import { Route } from 'react-router-dom';
 import EduSystem from './components/eduSystem';
-import College from './components/college';
+import Colleges from './components/colleges';
 import Exercises from './components/exercises';
 import Events from './components/events';
 import Dashboard from './components/dashboard';
 import Login from './components/loginForm';
 import RegisterForm from './components/registerForm';
 import Logout from './components/logout';
+import College from './components/college';
 
 class App extends Component {
   state = {  } 
@@ -32,11 +33,12 @@ class App extends Component {
           <Navbar/>
           <div className='container' >
               <Route path="/questions/:id/" component={Question}/>
+              <Route path="/colleges/:id/" component={College}/>
               <Route path="/login" component={Login}/>
               <Route path="/logout" component={Logout} />
               <Route path="/register" component={RegisterForm}/>
               <Route path="/edusys" component={EduSystem}/>
-              <Route path="/college" component={College}/>
+              <Route path="/college" component={Colleges}/>
               <Route path="/exercises" component={Exercises}/>
               <Route path="/events" component={Events}/>
               <Route path="/" exact component={Dashboard}/>
